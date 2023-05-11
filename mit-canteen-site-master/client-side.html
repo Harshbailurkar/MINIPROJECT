@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITCOE Canteen | Menu</title>
+    
+    <!-- Page Icon -->
+    <link rel="Microsoft icon" href="assets/images/MIT LOGO.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+          crossorigin="anonymous" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Firebase Connectivity Using CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+    <!-- Sweet Alert Pop Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    
+    <!-- NavBar -->
+    <header class="navbar">
+        <div class="container flex text-center jc-ai-center">
+            <!-- Left Navigation -->
+            <div class="site-title flex align-item-center">
+                <div>
+                    <a href="client-side.html"><h1><span class="clr-red">SITCOE</span> <span class="clr-green">Canteen</span></h1></a>
+                </div>
+                <!-- Toggle Bars -->
+                <div class="toggle-bars mybar">
+                    <div class="bars bar-1"></div>
+                    <div class="bars bar-2"></div>
+                    <div class="bars bar-3"></div>
+                </div>
+            </div>
+            <!-- Right Navigation -->
+            <nav class="site-nav flex left-nav align-item-center">                
+                <ul class="flex">
+                    <li><a href="client-side.html"><i class="fas fa-cocktail"></i> Menu</a></li>
+                    <li><a href="user-orders.html"><i class="fas fa-coins"></i> Your Orders</a></li>
+                    <button  class="btn" id="userlogout">Log Out</button>
+                    <!-- Cart Icon -->
+                    <a class="flex" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p id="cart-values">0</p>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navbar -->
+    <header class="mob-navbar">
+        <nav class="nav container">
+            <ul class="mob-ul">
+                <li><a href="client-side.html">Menu</a></li>
+                <li><a href="user-orders.html">My Orders</a></li>
+                <button  class="btn" id="userlogout">Log Out</button>
+                <!-- Cart Icon -->
+                <a class="flex" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p id="cart-values">6</p>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart -->
+    <section class="cart-overlay">
+        <div class="cart-innerlay">
+            <!-- Upper Side -->
+            <header class="cart-title text-center md">
+                <div>Your Cart</div>
+                <div>
+                    <i class="fas fa-times" 
+                       onclick="cartOverlay.classList.remove('show');
+                       cartInnerly.classList.remove('showCart');">
+                    </i>
+                </div>
+            </header>
+            <!-- Cart Item Container -->
+            <div class="cart-items-container py-2">
+                <!-- Cart Items added to cart -->
+   
+            </div>
+            <hr class="py-1">
+            <!-- Footer Side  -->
+            <div class="cart-footer text-center sm">
+                <div>Your Total : &#8377;<span class="cart-total sm">0</span></div>
+                <div class="my-1">
+                    <button class="clear-cart">Clear Cart</button>
+                    <button class="check-out">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Showcase -->
+    <!-- Hero -->
+    <section class="menu-hero">
+        <div class="banner">
+            <h1 class="banner-title lg">Our Menu</h1>
+            <button class="banner-btn btn">order now</button>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu" style="margin-bottom: 5rem;">
+        <main class="container grid grid-1">
+            <!-- Title -->
+           <div class="title text-center">
+               <h2 class="lg my-2">Filter By Category</h2>
+                <!-- Filter Buttons -->
+                <div class="btn-container grid grid-4">
+                    <button id="menu-filter" class="filter-btn btn current" type="button" data-id="all">All</button>
+                    <button id="menu-filter" class="filter-btn btn" type="button" data-id="Burger">Burger</button>
+                    <button id="menu-filter" class="filter-btn btn" type="button" data-id="Sandwitch">Sandwich</button>
+                    <button id="menu-filter" class="filter-btn btn" type="button" data-id="Fries">Fries</button>
+                    <button id="menu-filter" class="filter-btn btn fv" type="button" data-id="Maggie">Maggie</button>
+                    <button id="menu-filter" class="filter-btn btn" type="button" data-id="Beverages">Beverages</button>
+                    <button id="menu-filter" class="filter-btn btn" type="button" data-id="Pasta">Pasta</button>
+                </div>
+           </div>
+           <hr>
+           <!-- Menu Items -->
+           <div class="menu-section grid grid-3">
+               <!-- Menu Item -->
+           </div>
+       </main>
+   </section>
+   
+    <!-- User Footer -->
+    <footer class="customer-footer" id="user-footer" style="margin-top: 10rem;"><!-- Comes Through JS --></footer>
+
+    <!-- Menu & Admin Stuff -->
+    <script src="assets/js/main.js"></script>
+    <!-- Creative Features -->
+    <script src="assets/js/features.js"></script>
+    <!-- Controls User Stuff -->
+    <script src="assets/js/functioning.js"></script>
+
+</body>
+</html>

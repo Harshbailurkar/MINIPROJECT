@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mit Canteen | Our Vision</title>
+    
+    <!-- Page Icon -->
+    <link rel="Microsoft icon" href="assets/images/MIT LOGO.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+          crossorigin="anonymous" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Firebase Connectivity Using CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+    <!-- Sweet Alert Pop Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <!-- NavBar -->
+    <header class="navbar" id="preview-navbar"><!-- Comes From Js File --></header>
+
+    <!-- Mobile Navbar -->
+    <header class="mob-navbar" id="mob-preview-navbar"><!-- Comes through JS --></header>
+
+    <!-- Modal SignUp -->
+    <section class="signup-modal"><!-- Comes through JS --></section>
+
+    <!-- Modal LogIn -->
+    <section class="sign-modal"><!-- Comes through JS --></section>
+
+    <!-- Main Image -->
+    <section class="main-img">
+        <div class="banner">
+            <h1 class="banner-title lg">Our Vision</h1>
+        </div>
+    </section>
+
+    <!-- Our History Section -->
+    <section class="our-history m-2">
+        <main class="container-min grid grid-1">
+            <!-- Heading -->
+            <div class="text-center">
+                <h1 class="lg">__ Our History __</h1>
+                <h3 class="md">FOUNDED IN 2004</h3>
+            </div>
+            <!-- Content -->
+            <div class="grid grid-2 md align-item-center">
+                <div class="m-3" id="history-content">
+                    <p class="p">Sharad Institute of Technology is committed to provide value
+                        based quality technical education and facilitis to the students 
+                        to boost there performance. Always continue the climb. It is 
+                        possible for you to do whatever you choose, if you first get 
+                        to know who you are and are willing to work with a power that 
+                        is greater than ourselves to do it.</p>
+                     <p class="p">Nothing can be done without hope and confidence. If you can 
+                         dream it, you can do it. Do it now, not tomorrow. Always continue the climb.</p>
+                </div>
+                <div class="p-3" id="history-img"><img src="assets/images/history-img.jpg" alt=""></div>
+            </div>
+        </main>
+    </section>
+
+    <hr>
+
+    <!-- Our Philosphy -->
+    <section class="our-philosphy my-3">
+        <main class="grid grid-1">
+            <!-- Heading -->
+            <div class="text-center">
+                <h1 class="lg">__ Our Philosphy __</h1>
+                <h3 class="md">YOU ARE WHAT YOU EAT</h3>
+            </div>
+            <!-- Content -->
+            <article class="grid grid-3 jc-ai-center">
+                <figure>
+                    <div><h4 class="md display-table">Asian Cusines</h4></div>
+                    <figcaption class="align-item-center">
+                        <img src="assets/images/op-dishsvg.svg" alt="">
+                        <p>Do not dwell in the past, do not dream of the future,
+                           concentrate the mind on the present moment.</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <div><h4 class="md display-table">Great Food</h4></div>
+                    <figcaption class="align-item-center">
+                        <img src="assets/images/burger.svg" alt="">
+                        <p>Never be bullied into silence. Never allow yourself to 
+                           be made a victim. Accept no one's definition.</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <div><h4 class="md display-table">Beverages</h4></div>
+                    <figcaption class="align-item-center">
+                        <img src="assets/images/op-drink.svg" alt="">
+                        <p>Do not dream of the future, concentrate the mind 
+                           on the present moment. Dream big. Go forward.</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <div><h4 class="md display-table">Hot to Server</h4></div>
+                    <figcaption class="align-item-center">
+                        <img src="assets/images/op-hot.svg" alt="">
+                        <p>Everything should be as simple as it is, but not simpler; 
+                           Believe that life is worth living and your belief.</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <div><h4 class="md display-table">Dessert</h4></div>
+                    <figcaption class="align-item-center">
+                        <img src="assets/images/op-dessert.svg" alt="">
+                        <p>Never be bullied into silence. Never allow yourself 
+                           to be made a victim. Accept no one's definition.</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <div><h4 class="md display-table">Coffee</h4></div>
+                    <figcaption class="align-item-center">
+                        <img src="assets/images/op-coffee.svg" alt="">
+                        <p>Do not dream of the future, concentrate the mind on
+                           the present moment. Dream big. Go forward.</p>
+                    </figcaption>
+                </figure>
+            </article>
+        </main>
+    </section>
+
+    <hr>
+
+    <!-- What We Stand For Section -->
+    <section class="our-history m-3">
+        <main class="container-min grid grid-1">
+            <!-- Heading -->
+            <div class="text-center">
+                <h1 class="lg">What We Stand For?</h1>
+                <h3 class="md">OUR CORE VALUES</h3>
+            </div>
+            <!-- Content -->
+            <article class="grid grid-2 md align-item-center">
+                <div class="m-3" id="history-content">
+                    <div ><h4 class="display-table"><span class="clr-red sm">SITCOE </span><span class="clr-green sm"> Pocket Friendly Cafe</span></h4></div>
+                    <p>Sharad Institute of Technology is committed to provide value
+                        based quality technical education and facilities to the students 
+                        to boost there performance. Always continue the climb. It is 
+                        possible for you to do whatever you choose, if you first get 
+                        to know who you are and are willing to work with a power that 
+                        is greater than ourselves to do it.</p>
+                    <p>Nothing can be done without hope and confidence. If you can 
+                        dream it, you can do it. Do it now, not tomorrow. Always continue the climb.</p>
+                </div>
+                <div class="p-3" id="history-img" ><img src="assets/images/history-img.jpg" alt=""></div>
+            </article>
+        </main>
+    </section>
+
+    <!-- Customers Footer -->
+    <footer class="customer-footer"><!-- Comes Through JS --></footer>
+
+    <!-- Creative Features -->
+    <script src="assets/js/features.js"></script>
+    <!-- Controls User Stuff -->
+    <script src="assets/js/functioning.js"></script>
+    <!-- Page Animations -->
+    <script src="assets/js/animations.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* Inner Block Sizes */
+.container {
+    max-width: 1800px; margin: 0 auto;
+    padding: 0 40px; overflow: auto;
+}
+
+.container-min { max-width: 1300px; margin: 0 auto; }
+
+/* Display Sections */
+.flex { display: flex; flex-wrap: wrap; }
+
+.flex-column {
+    display: flex; flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid; gap: 20px;
+    margin: 0 auto;
+}
+
+.grid-1 { grid-template-columns: repeat(1, 1fr); }
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.menu-showcase .grid-5 { grid-template-columns: repeat(5, 1fr); gap: 5px; }
+
+.show { visibility: visible; }
+
+.hide-stuff { visibility: hidden; height: 0;}
+
+.display-none { display: none; }
+
+.current { background-color: #000; color: #fff; }
+
+/* Underline (Cool Ones)*/
+.display-table {
+    border-bottom: 1px solid #533834; display: table;
+    margin-bottom: 10px; padding-bottom: 8px;
+}
+
+.bold { font-weight: bold;}
+
+/* Aligning Content */
+.align-item-center { align-items: center; }
+
+.jc-ai-center { justify-content: center; align-content: center; }
+
+/* Buttons */
+button {cursor: pointer;}
+
+.btn {
+    border-radius: 20px; border: 1px solid #333;
+    padding: 8px 20px; margin: 5px 15px;
+}
+
+.btn:hover { background-color: #000; color: #fff; }
+
+/* Cards */
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform ease-in 0.2s;
+}
+
+/* Text Colours */
+.clr-red { color: rgb(255, 0, 0); }
+.clr-green { color: rgb(0, 128, 0); }
+.clr-black { color: #333;}
+
+/* Text Center */
+.text-center { text-align: center; margin: 0 auto; }
+/* Text Decorations */
+.underline { border-bottom: 2px solid #000; }
+
+/* Text Sizes */
+.sm { font-size: 1.5rem;}
+.md { font-size: 2rem;}
+.lg { font-size: 3rem;}
+.xl { font-size: 4rem;}
+.xxl { font-size: 5rem;}
+
+/* Margin Y Axis */
+.my-1 { margin: 1rem auto;}
+.my-2 { margin: 2rem auto;}
+.my-3 { margin: 3rem auto;}
+.my-4 { margin: 4rem auto;}
+.my-5 { margin: 5rem auto;}
+
+/* Margin XY Axis */
+.m-1 { margin: 1rem;}
+.m-2 { margin: 2rem;}
+.m-3 { margin: 3rem;}
+.m-4 { margin: 4rem;}
+.m-5 { margin: 5rem;}
+
+/* Padding Y Axis */
+.py-1 { margin: 1rem auto;}
+.py-2 { margin: 2rem auto;}
+.py-3 { margin: 3rem auto;}
+.py-4 { margin: 4rem auto;}
+.py-5 { margin: 5rem auto;}
+
+/* Padding XY Axis */
+.p-1 { padding: 1rem;}
+.p-2 { padding: 2rem;}
+.p-3 { padding: 3rem;}
+.p-4 { padding: 4rem;}
+.p-5 { padding: 5rem;}
+
+/* Glyph, by Harry Roberts */
+.hrStyle{
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.hrStyle:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
